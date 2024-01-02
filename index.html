@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Novabeat</title>
+          <meta name="description" content="Experience seamless connectivity, powerful wattage, and crystal clear audio in one sleek design. Elevate your space with unparalleled audio quality.">
+  <meta property="og:title" content="Novabeat">
+  <meta property="og:description" content="Experience seamless connectivity, powerful wattage, and crystal clear audio in one sleek design. Elevate your space with unparalleled audio quality.">
+  <meta property="og:image" content="https://novabeat.koldhielo.repl.co/NOVABEAT.svg">
+  <meta property="og:url" content="https://novabeat.koldhielo.repl.co">
+  <meta name="twitter:title" content="Novabeat">
+  <meta name="twitter:description" content="Experience seamless connectivity, powerful wattage, and crystal clear audio in one sleek design. Elevate your space with unparalleled audio quality.">
+  <meta name="twitter:image" content="https://novabeat.koldhielo.repl.co/NOVABEAT.svg">
+  <link rel="canonical" href="https://novabeat.koldhielo.repl.co">
+  <link rel="icon" type="image/x-icon" href="https://novabeat.koldhielo.repl.co/NOVABEAT.svg">
+  <link rel="shortcut icon" href="https://novabeat.koldhielo.repl.co/NOVABEAT.svg">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('Fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('Fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('Fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('Fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        :root {
+            --content-width: 312px;
+            --nav-height: 58px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', Monospace, Arial;
+            color: white;
+        }
+
+        html {
+          overflow-x: hidden;
+        }
+
+        body {
+            display: none;
+            overflow-x: hidden;
+            background: linear-gradient(174deg, #100F1F 0, #184479 26.94%, #100F1F 103.22%);
+            padding-bottom: var(--nav-height);
+        }
+
+        
+        
+        nav {
+            position: fixed;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #102B49;
+            text-align: center;
+            font-size: 12px;
+            user-select: none;
+            padding: 8px 10%;
+        }
+
+        nav img {
+            display: block;
+            margin: 0 auto 10px auto;
+            width: 100px;
+            height: 25px;
+        }
+
+        #top-speaker {
+          transition: opacity 1400ms ease-in, transform 1400ms ease-out;
+        }
+
+        #top-speaker {
+            position: relative;
+            left: -350px;
+            top: -20px;
+            width: 726px;
+            height: 403px;
+            z-index: -1;
+        }
+
+        nav a {
+          text-decoration: none;
+        }
+        
+        nav a:hover {
+            filter: invert(50%) sepia(92%) saturate(1438%) hue-rotate(1deg) brightness(104%) contrast(105%);
+            color: #FF8A00;
+            cursor: pointer;
+        }
+        
+        #timer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            padding: 0 30px;
+            margin: -110px auto 17.5px auto;
+            gap: 0 20px;
+            max-width: 400px;
+
+        }
+        
+        .quantity {
+            border: 1px solid #BFDDFF;
+            backdrop-filter: blur(2.732515811920166px);
+            border-radius: 50px;
+            padding: 8px 5px;
+            background-color: rgba(0, 0, 0, 30%);
+            font-weight: 500;
+        }
+        
+        .timelapse {
+            color: #BFDDFF;
+            font-size: 14px;
+            margin-top: 9.38px;
+            font-size: 12.95px;
+            font-weight: 500;
+        }
+        
+        #novabeat-logo {
+            width: var(--content-width);
+            height: 30.072px;
+            flex-shrink: 0;
+            margin: 0 auto;
+            display: block;
+        }
+
+        h2 {
+            color: #BFDDFF;
+            font-weight: 500;
+            font-size: 26px;
+            margin: 24px auto 0 auto;
+            width: var(--content-width);
+            overflow: hidden;
+            line-height: 120%;
+        }
+
+        p {
+            width: var(--content-width);
+            margin: 12px auto 0 auto;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+        h3 {
+            font-weight: 400;
+            margin: 24px auto 0 auto;
+            width: var(--content-width);
+        }
+
+        [name="email"] {
+            width: var(--content-width);
+            margin: 24px auto 0 auto;
+            display: block;
+            border-radius: 34.11px;
+            border: none;
+            height: 56px;
+            color: black;
+            font-size: 16px;
+            padding: 0 24.66px;
+        }
+
+        #signup-button, #preorder-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--content-width);
+            border-radius: 34.11px;
+            border: 1px solid #FFFFFF;
+            height: 56px;
+            margin: 12px auto 0 auto;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        #signup-button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #signup-button:hover, #preorder-button:hover {
+            background-color: #FF8A00;
+            border-color: #FF8A00;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #middle-speaker {
+            display: block;
+            width: 366px;
+            height: 146px;
+            margin: 0 auto;
+            transition: 1400ms ease-out;
+        }
+
+        h2:nth-of-type(2) {
+            margin-top: 22px;
+        }
+
+        #features {
+            width: var(--content-width);
+            margin: 24px auto 0 auto;
+            padding-bottom: 58px;
+        }
+
+        .feature img {
+            width: 50px;
+        }
+
+        .feature {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .feature:not(:first-of-type) {
+            margin-top: 12px;
+        }
+
+        #preorder-section {
+            background-color: #EFF6FF;
+            overflow: hidden;
+        }
+
+        #bottom-speaker {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            transition: 1400ms ease-out;
+        }
+
+        #bottom-speaker-mq {
+            display: none;
+            transition: 1400ms ease-out;
+        }
+
+        #preorder-section h2 {
+            color: #FF8A00;
+        }
+
+        #preorder-section p, #preorder-section p b {
+            color: #184479;
+            margin: 12px auto 0 auto;
+        }
+
+        #was-price {
+            display: block;
+            color: #FF8A00;
+            font-size: 16px;
+            text-decoration-line: line-through;
+            letter-spacing: -1.6px;
+            width: var(--content-width);
+            margin: 10px auto 0 auto;
+        }
+
+        #now-price {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            width: var(--content-width);
+            margin: 1px auto 0 auto;
+            color: #184479;
+        }
+
+        #preorder-button {
+            border: 1px solid #184479;
+            color: #184479;
+            margin-top: 24px;
+            margin-bottom: 33px;
+        }
+
+        #preorder-button:hover {
+            color: #FFFFFF;
+        }
+          
+        @media only screen and (min-width: 768px) {
+            #preorder-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            #preorder-section > div {
+                width: calc(var(--content-width) + 198px);
+                padding-left: 198px;
+            }
+
+            #bottom-speaker-mq {
+                display: block;
+                order: 1;
+                position: relative;
+                width: 100%;
+                min-width: 520px;
+            }
+
+            #bottom-speaker {
+                display: none;
+            }
+
+            #was-price {
+                letter-spacing: 0;
+            }
+
+            #now-price {
+                font-size: 26px;
+                
+            }
+        }
+
+          @media only screen and (min-width: 992px) {
+              body {
+                  padding-bottom: 0;
+                  background: linear-gradient(174deg, #100F1F 10.4%, #184479 26.94% 65%, #100F1F 80% 103.22%);
+              }
+
+              nav {
+                  position: absolute;
+                  top: 0;
+                  background-color: transparent;
+                  font-weight: 500;
+                  padding: 50px 27% 10px 27%;
+                  font-size: 16px;
+                  height: var(--nav-height);
+              }
+
+              nav img {
+                  display: none;
+              }
+
+              #signup-section {
+                  position: absolute;
+                  right: 10%;
+                  top: calc(78px + 94px);
+                  width: 422px;
+                  transform: scale(0.7);
+              }
+
+              #signup-section > * {
+                  width: 100%;
+                  
+              }
+
+              #novabeat-logo {
+                  height: 40.674px;
+              }
+
+              h2 {
+                  font-size: 36px;
+                  line-height: 110%;
+              }
+
+              #top-speaker {
+                  width: 1200px;
+                  height: 759px;
+                  top: 0;
+                  left: -470px;
+                  transform: scale(0.7);
+              }
+
+              #signup-input-and-button {
+                  display: flex;
+                  align-items: center;
+                  margin: 24px auto 0 auto;
+              }
+
+              #signup-input-and-button > * {
+                  margin: 0;
+              }
+
+              [name="email"] {
+                  border-radius: 35px 0px 0px 35px;
+                  width: 67%; 
+              }
+
+              #signup-button {
+                  border-radius: 0px 35px 35px 0px; 
+                  width: 33%;
+              }
+
+              #timer-container {
+                  transform: scale(1.2);
+                  max-width: 440px;
+              }
+
+              #image-and-features {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  margin-top: 70px;
+              }
+
+              #middle-speaker {
+                  width: 540px;
+                  height: auto;
+                  position: relative;
+                  bottom: -40px;
+                  transform: scale(0.7);
+              }
+
+              #image-and-features > div:first-of-type {
+                  order: 1;
+              }
+
+              #image-and-features > div:nth-of-type(2) {
+                  width: 540px;
+                  padding-left: 50px;
+                  transform: scale(0.9);
+              }
+
+
+              #image-and-features > div:nth-of-type(2) > * {
+                  width: 100%;
+              }
+          }
+
+        @media only screen and (min-width: 1199px) {
+          #signup-section {
+            transform: scale(0.8);
+          }
+
+          #top-speaker {
+            transform: scale(0.8);
+          }
+        }
+
+          @media only screen and (min-width: 1284px) {
+            #signup-section {
+              transform: scale(0.9);
+            }
+
+            #top-speaker {
+              transform: scale(0.9);
+            }
+          }
+
+        @media only screen and (min-width: 1440px) {
+            body {
+                padding-bottom: 0;
+            }
+
+            nav {
+                position: absolute;
+                top: 0;
+                background-color: transparent;
+                font-weight: 500;
+                padding: 50px 30% 10px 30%;
+            }
+
+            nav img {
+                display: none;
+            }
+
+            #signup-section {
+                transform: scale(1);
+            }
+
+            #top-speaker {
+                width: 1200px;
+                height: 759px;
+                top: 0;
+                left: -470px;
+                transform: scale(1);
+            }
+
+            #timer-container {
+                transform: scale(1.5);
+                max-width: 440px;
+            }
+
+            #image-and-features {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-top: 70px;
+            }
+
+            #middle-speaker {
+                width: 720px;
+                height: auto;
+                position: relative;
+                bottom: 40px;
+                transform: scale(1);
+            }
+
+            #image-and-features > div:first-of-type {
+                order: 1;
+            }
+
+            #image-and-features > div:nth-of-type(2) {
+                width: 720px;
+                padding-left: 200px;
+                transform: scale(1);
+            }
+
+            #image-and-features > div:nth-of-type(2) > * {
+                width: 100%;
+            }
+        }
+
+          @media only screen and (min-width: 1648px) {
+            #signup-section {
+              transform: scale(1.1);
+            }
+
+            #top-speaker {
+              transform: scale(1.1);
+            }
+          }
+
+          @media only screen and (min-width: 1588px) {
+            #signup-section {
+              right: 15%;
+            }
+          }
+
+          @media only screen and (min-width: 1752px) {
+            #signup-section {
+              right: 17%;
+            }
+
+            #top-speaker {
+              transform: scale(1.2);
+            }
+          }
+        </style>
+    </head>
+    <body>
+        <img id="top-speaker" style="opacity: 0; transform: translate(-5%, 0);" src="speaker.png" alt="Top Speaker">
+
+        <section id="timer-container">
+            <div id="days">
+                <div class="day quantity">30</div>
+                <div class="day timelapse">days</div>
+            </div>
+            <div id="hours">
+                <div class="hour quantity">00</div>
+                <div class="hour timelapse">hours</div>
+            </div>
+            <div id="minutes">
+                <div class="minute quantity">00</div>
+                <div class="minute timelapse">minutes</div>
+            </div>
+            <div id="seconds">
+                <div class="second quantity">00</div>
+                <div class="second timelapse">seconds</div>
+            </div>
+        </section>
+
+        <section id="signup-section">
+            <img id="novabeat-logo" src="NOVABEAT.svg" alt="NOVABEAT Logo">
+
+            <h2>The Ultimate Audio Experience is coming</h2>
+            <p>Get updates on our awaited music speaker. Sign up now to be the first to know when it's released and elevate your audio experience.</p>
+
+            <h3>Sign up to be notified</h3>
+            <div id="signup-input-and-button">
+                <input type="email" placeholder="myemail@mydomain.com" name="email">
+                <div id="signup-button">
+                    <img src="Icons/icon_bell.svg" alt="Bell Icon">
+                    <span>Sign up</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="image-and-features">
+            <div>
+                <img id="middle-speaker" src="speaker2.png" alt="Speaker Image" class="trigger-top" style="opacity: 0; transform: translate(0, -10px);">
+            </div>
+
+            <div>
+                <h2>Discover Exceptional Sound</h2>
+                <p>Experience seamless connectivity, powerful wattage, and crystal clear audio in one sleek design. Elevate your space with unparalleled audio quality.</p>
+
+                <section id="features">
+                    <div class="feature">
+                        <img src="Icons/icon_bluetooth.svg" alt="Bluetooth Icon">
+                        <span>Bluetooth wireless technology</span>
+                    </div>
+                    <div class="feature">
+                        <img src="Icons/icon_watt.svg" alt="Wattage Icon">
+                        <span>125 watts per channel</span>
+                    </div>
+                    <div class="feature">
+                        <img src="Icons/icon_wave.svg" alt="Soundwave Icon">
+                        <span>Rich bass and clear audio balance</span>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="preorder-section">
+            <img id="bottom-speaker" class="trigger-bottom" style="transform: translate(0, -97%);" src="speaker3_cropped.png" alt="Speaker Image">
+            <img id="bottom-speaker-mq" class="trigger-bottom" style="transform: translate(0, -97%);" src="speaker3_cropped_v2.png" alt="Speaker Image">
+            <div>
+                <h2>Ready to order?</h2>
+                <p>Secure superior sound by pre-ordering the <b>NOVABEAT speaker</b> for an exclusive discount.</p>
+
+                <span id="was-price">£159.99</span>
+                <span id="now-price">£139.99</span>
+
+                <a id="preorder-button">
+                    Pre-order
+                </a>
+            </div>
+        </section>
+
+        <nav>
+            <a href="#timer-container">
+                <div>
+                    <img src="Icons/icon_speaker.svg" alt="Icon Speaker Image">
+                    <span>NOVABEAT</span>
+                </div>
+            </a>
+            <a href="#middle-speaker">
+                <div>
+                    <img src="Icons/icon_features.svg" alt="Icon Features Image">
+                    <span>FEATURES</span>
+                </div>
+            </a>
+            <a href="#preorder-section">
+                <div>
+                    <img src="Icons/icon_pre-order.svg" alt="Icon Pre-Order Image">
+                    <span>PRE-ORDER</span>
+                </div>
+            </a>
+        </nav>
+        <script>
+            window.addEventListener('load', () => {
+              document.querySelector('body').style.display = 'block';
+              setTimeout(() => {
+                document.querySelector('#top-speaker').removeAttribute('style');
+              }, 200);
+            });
+            const days = document.querySelector('.day.quantity');
+            const hours = document.querySelector('.hour.quantity');
+            const minutes = document.querySelector('.minute.quantity');
+            const seconds = document.querySelector('.second.quantity');
+            
+            
+            const countdown = () => {
+                let dayCount = parseInt(days.innerHTML);
+                let hourCount = parseInt(hours.innerHTML);
+                let minuteCount = parseInt(minutes.innerHTML);
+                let secondCount = parseInt(seconds.innerHTML);
+                
+                secondCount--
+                if(secondCount < 0) {
+                    secondCount = 59;
+                    minuteCount--;
+                    if(minuteCount < 0) {
+                        minuteCount = 59;
+                        hourCount--;
+                        if(hourCount < 0) {
+                            hourCount = 23;
+                            dayCount--;
+                            if(dayCount < 0) {
+                                dayCount = 0;
+                                hourCount = 0;
+                                minuteCount = 0;
+                                secondCount = 0;
+                                clearInterval(countdownInterval);
+                                alert('Time\'s up!!');
+                            }
+                        }
+                    }
+                }
+                if(secondCount < 10) {
+                    secondCount = `0${secondCount}`;
+                }
+                if(minuteCount < 10) {
+                    minuteCount = `0${minuteCount}`;
+                }
+                if(hourCount < 10) {
+                    hourCount = `0${hourCount}`;
+                }
+                if(dayCount < 10) {
+                    dayCount = `0${dayCount}`;
+                }
+                days.innerHTML = dayCount;
+                hours.innerHTML = hourCount;
+                minutes.innerHTML = minuteCount;
+                seconds.innerHTML = secondCount;
+            }
+            
+            const countdownInterval = setInterval(countdown, 1000);
+
+            const navAnchors = document.querySelectorAll('nav a');
+
+            navAnchors.forEach(anchor => {
+              anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = anchor.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                  top: targetPosition,
+                  left: 0,
+                  behavior: 'smooth'
+                });
+              })
+            })
+
+            window.addEventListener('scroll', e => {
+              viewportBottom = window.pageYOffset + window.innerHeight;
+              const topElementsToTransition = document.querySelectorAll('.trigger-top[style]');
+              const bottomElementsToTransition = document.querySelectorAll('.trigger-bottom[style]');
+              topElementsToTransition.forEach(element => {
+                let elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                if(viewportBottom - 100 > elementPosition) {
+                   element.removeAttribute('style');
+                 }
+              })
+              bottomElementsToTransition.forEach(element => {
+                let elementPosition = element.getBoundingClientRect().bottom + window.pageYOffset;
+                if(viewportBottom - 100 > elementPosition) {
+                   element.removeAttribute('style');
+                   console.log(elementPosition, viewportBottom);
+                 }
+              })
+            })
+        </script>
+    </body>
+</html>
