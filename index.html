@@ -183,6 +183,7 @@
             color: black;
             font-size: 16px;
             padding: 0 24.66px;
+            outline: none;
         }
 
         #signup-button, #preorder-button {
@@ -213,8 +214,8 @@
 
         #middle-speaker {
             display: block;
-            width: 366px;
-            height: 146px;
+            width: 400px;
+            height: 200px;
             margin: 0 auto;
             transition: 1400ms ease-out;
         }
@@ -298,6 +299,12 @@
 
         #preorder-button:hover {
             color: #FFFFFF;
+        }
+
+        @media only screen and (min-width: 600px) {
+            #middle-speaker {
+                transform: scale(1.2);
+            }
         }
           
         @media only screen and (min-width: 768px) {
@@ -417,11 +424,10 @@
               }
 
               #middle-speaker {
-                  width: 540px;
+                  width: 80%;
                   height: auto;
                   position: relative;
                   bottom: -40px;
-                  transform: scale(0.7);
               }
 
               #image-and-features > div:first-of-type {
