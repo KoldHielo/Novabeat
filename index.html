@@ -79,7 +79,7 @@
             right: 0;
             background-color: #102B49;
             text-align: center;
-            font-size: 12px;
+            font-size: 10px;
             user-select: none;
             padding: 8px 10%;
         }
@@ -87,12 +87,8 @@
         nav img {
             display: block;
             margin: 0 auto 10px auto;
-            width: 100px;
+            width: 25px;
             height: 25px;
-        }
-
-        #top-speaker {
-          transition: opacity 1400ms ease-in, transform 1400ms ease-out;
         }
 
         #top-speaker {
@@ -102,6 +98,7 @@
             width: 726px;
             height: 403px;
             z-index: -1;
+            transition: opacity 1400ms ease-in, transform 1400ms ease-out;
         }
 
         nav a {
@@ -141,12 +138,15 @@
             font-size: 12.95px;
             font-weight: 500;
         }
+
+        #signup-section {
+            padding: 0 24px;
+        }
         
         #novabeat-logo {
             width: var(--content-width);
             height: 30.072px;
             flex-shrink: 0;
-            margin: 0 auto;
             display: block;
         }
 
@@ -155,13 +155,11 @@
             font-weight: 500;
             font-size: 26px;
             margin: 24px auto 0 auto;
-            width: var(--content-width);
             overflow: hidden;
             line-height: 120%;
         }
 
         p {
-            width: var(--content-width);
             margin: 12px auto 0 auto;
             font-size: 16px;
             line-height: 150%;
@@ -170,7 +168,7 @@
         h3 {
             font-weight: 400;
             margin: 24px auto 0 auto;
-            width: var(--content-width);
+            text-align: center;
         }
 
         [name="email"] {
@@ -186,6 +184,14 @@
             outline: none;
         }
 
+        #preorder-button {
+            margin-top: 12px;
+        }
+
+        #signup-button {
+            margin: 12px auto 0 auto;
+        }
+
         #signup-button, #preorder-button {
             display: flex;
             align-items: center;
@@ -194,7 +200,6 @@
             border-radius: 34.11px;
             border: 1px solid #FFFFFF;
             height: 56px;
-            margin: 12px auto 0 auto;
             gap: 6px;
             font-size: 14px;
             font-weight: 700;
@@ -214,10 +219,13 @@
 
         #middle-speaker {
             display: block;
-            width: 400px;
-            height: 200px;
+            width: 100%;
             margin: 0 auto;
             transition: 1400ms ease-out;
+        }
+
+        #image-and-features {
+            padding: 0 24px 0 24px;
         }
 
         h2:nth-of-type(2) {
@@ -225,7 +233,6 @@
         }
 
         #features {
-            width: var(--content-width);
             margin: 24px auto 0 auto;
             padding-bottom: 58px;
         }
@@ -266,6 +273,11 @@
             color: #FF8A00;
         }
 
+        #preorder-section > div {
+            width: var(--content-width);
+            margin: 0 auto;
+        }
+
         #preorder-section p, #preorder-section p b {
             color: #184479;
             margin: 12px auto 0 auto;
@@ -302,9 +314,105 @@
         }
 
         @media only screen and (min-width: 600px) {
-            #middle-speaker {
-                transform: scale(1.2);
+            nav {
+                height: 74px;
+                font-size: 12.5px;
             }
+
+            nav img {
+                height: 31.25px;
+                width: 31.25px;
+            }
+
+            #top-speaker {
+                width: 1052px;
+                height: 583px;
+                transform: translate(-100px, 0);
+            }
+
+            #signup-section {
+                margin-top: 60px;
+            }
+
+            #middle-speaker {
+                width: 100%;
+            }
+
+            #timer-container {
+                transform: scale(1.64);
+                margin-top: -153px;
+            }
+
+            #novabeat-logo {
+                width: 390px;
+                height: 37.59px; 
+            }
+
+            h2 {
+                font-size: 36px;
+            }
+
+            h3 {
+                font-size: 24px;
+                text-align: left;
+            }
+
+            #signup-input-and-button {
+                display: flex;
+                align-items: center;
+                margin: 24px 0 0 0;
+                width: calc(266px + 156px);
+            }
+
+            #signup-input-and-button > * {
+                margin: 0;
+            }
+
+            [name="email"] {
+                border-radius: 35px 0px 0px 35px;
+                width: 64%; 
+                height: 60px;
+            }
+
+            #signup-button {
+                border-radius: 0px 35px 35px 0px; 
+                width: 36%;
+                font-size: 16px;
+                height: 60px;
+            }
+
+            #preorder-section {
+                overflow: hidden;
+            }
+
+            #preorder-section > div {
+                width: auto;
+                padding: 0 32px;
+            }
+
+            #bottom-speaker-mq {
+                display: block;
+                order: 1;
+                position: relative;
+                width: 100%;
+                min-width: 520px;
+                transform: translate(0, -30px);
+            }
+
+            #bottom-speaker {
+                display: none;
+            }
+
+            #was-price {
+                letter-spacing: 0;
+                width: auto;
+            }
+
+            #now-price {
+                font-size: 26px;
+                width: auto;
+            }
+
         }
           
         @media only screen and (min-width: 768px) {
@@ -315,10 +423,6 @@
                 overflow: hidden;
             }
 
-            #preorder-section > div {
-                width: calc(var(--content-width) + 198px);
-                padding-left: 198px;
-            }
 
             #bottom-speaker-mq {
                 display: block;
@@ -368,6 +472,8 @@
                   top: calc(78px + 94px);
                   width: 422px;
                   transform: scale(0.7);
+                  padding: 0;
+                  margin-top: 0;
               }
 
               #signup-section > * {
@@ -382,6 +488,10 @@
               h2 {
                   font-size: 36px;
                   line-height: 110%;
+              }
+
+              h3 {
+                font-size: 18.5px;
               }
 
               #top-speaker {
@@ -415,6 +525,7 @@
               #timer-container {
                   transform: scale(1.2);
                   max-width: 440px;
+                  margin-top: -110px;
               }
 
               #image-and-features {
@@ -424,10 +535,9 @@
               }
 
               #middle-speaker {
-                  width: 80%;
-                  height: auto;
                   position: relative;
-                  bottom: -40px;
+                  top: 50%;
+                  transform: translate(0, -70%);
               }
 
               #image-and-features > div:first-of-type {
@@ -435,11 +545,17 @@
               }
 
               #image-and-features > div:nth-of-type(2) {
-                  width: 540px;
                   padding-left: 50px;
                   transform: scale(0.9);
               }
 
+              #preorder-section > div {
+                padding: 0 0 0 32px;
+              }
+
+              #bottom-speaker-mq {
+                transform: translate(0, 0);
+              }
 
               #image-and-features > div:nth-of-type(2) > * {
                   width: 100%;
@@ -507,11 +623,7 @@
             }
 
             #middle-speaker {
-                width: 720px;
-                height: auto;
                 position: relative;
-                bottom: 40px;
-                transform: scale(1);
             }
 
             #image-and-features > div:first-of-type {
@@ -519,7 +631,6 @@
             }
 
             #image-and-features > div:nth-of-type(2) {
-                width: 720px;
                 padding-left: 200px;
                 transform: scale(1);
             }
