@@ -168,11 +168,10 @@
         h3 {
             font-weight: 400;
             margin: 24px auto 0 auto;
-            text-align: center;
         }
 
         [name="email"] {
-            width: var(--content-width);
+            width: 100%;
             margin: 24px auto 0 auto;
             display: block;
             border-radius: 34.11px;
@@ -186,17 +185,18 @@
 
         #preorder-button {
             margin-top: 12px;
+            width: var(--content-width);
         }
 
         #signup-button {
             margin: 12px auto 0 auto;
+            width: 100%;
         }
 
         #signup-button, #preorder-button {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: var(--content-width);
             border-radius: 34.11px;
             border: 1px solid #FFFFFF;
             height: 56px;
@@ -219,12 +219,16 @@
 
         #middle-speaker {
             display: block;
-            width: 100%;
+            position: relative;
+            width: 130%;
+            left: -15%;
             margin: 0 auto;
             transition: 1400ms ease-out;
         }
 
         #image-and-features {
+            position: relative;
+            top: -60px;
             padding: 0 24px 0 24px;
         }
 
@@ -335,7 +339,8 @@
             }
 
             #middle-speaker {
-                width: 100%;
+                width: 115%;
+                left: -7.5%;
             }
 
             #timer-container {
@@ -354,7 +359,6 @@
 
             h3 {
                 font-size: 24px;
-                text-align: left;
             }
 
             #signup-input-and-button {
@@ -421,6 +425,10 @@
                 grid-template-columns: 1fr 1fr;
                 align-items: center;
                 overflow: hidden;
+            }
+
+            #image-and-features {
+                top: -120px;
             }
 
 
@@ -532,12 +540,15 @@
                   display: grid;
                   grid-template-columns: 1fr 1fr;
                   margin-top: 70px;
+                  top: 0;
               }
 
               #middle-speaker {
                   position: relative;
                   top: 50%;
                   transform: translate(0, -70%);
+                  left: 0;
+                  width: 100%;
               }
 
               #image-and-features > div:first-of-type {
