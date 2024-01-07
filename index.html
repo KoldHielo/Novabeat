@@ -271,7 +271,7 @@
             transition: 1400ms ease-out;
         }
 
-        #bottom-speaker-mq {
+        #bottom-speaker-mq, #bottom-speaker-mq-two {
             display: none;
             transition: 1400ms ease-out;
         }
@@ -428,26 +428,20 @@
                 top: -120px;
             }
 
-
             #bottom-speaker-mq {
+                display: none;
+            }
+
+
+            #bottom-speaker-mq-two {
+                top: -50%;
                 display: block;
                 order: 1;
                 position: relative;
                 width: 100%;
+                transform: scale(2);
                 min-width: 520px;
-            }
-
-            #bottom-speaker {
-                display: none;
-            }
-
-            #was-price {
-                letter-spacing: 0;
-            }
-
-            #now-price {
-                font-size: 26px;
-                
+                right: -10%;
             }
         }
 
@@ -570,6 +564,10 @@
               #image-and-features > div:nth-of-type(2) > * {
                   width: 100%;
               }
+
+              #bottom-speaker-mq-two {
+                right: -8%;
+              }
           }
 
         @media only screen and (min-width: 1199px) {
@@ -586,6 +584,10 @@
             #top-speaker {
               transform: scale(0.9);
             }
+
+            #bottom-speaker-mq-two {
+                right: -6%;
+              }
           }
 
         @media only screen and (min-width: 1440px) {
@@ -645,18 +647,30 @@
                 transform: scale(1);
                 padding: 0 0 0 28%;
             }
+
+            #bottom-speaker-mq-two {
+                right: -4%;
+              }
         }
 
           @media only screen and (min-width: 1648px) {
             #top-speaker {
               transform: scale(1.1);
             }
+
+            #bottom-speaker-mq-two {
+                right: -2%;
+              }
           }
 
           @media only screen and (min-width: 1588px) {
             #signup-section {
               right: 15%;
             }
+
+            #bottom-speaker-mq-two {
+                right: 0;
+              }
           }
 
           @media only screen and (min-width: 1752px) {
@@ -667,24 +681,40 @@
             #top-speaker {
               transform: scale(1.2);
             }
+
+            #bottom-speaker-mq-two {
+                right: 2%;
+              }
           }
 
           @media only screen and (min-width: 2000px) {
             #top-speaker {
               left: -400px;
             }
+
+            #bottom-speaker-mq-two {
+                right: 4%;
+              }
           }
 
           @media only screen and (min-width: 2334px) {
             #top-speaker {
               left: -290px;
             }
+
+            #bottom-speaker-mq-two {
+                right: 6%;
+              }
           }
 
           @media only screen and (min-width: 2504px) {
             #top-speaker {
               left: -240px;
             }
+
+            #bottom-speaker-mq-two {
+                right: 8%;
+              }
           }
         </style>
     </head>
@@ -755,6 +785,7 @@
         <section id="preorder-section">
             <img id="bottom-speaker" class="trigger-bottom" style="transform: translate(0, -97%);" src="speaker3_cropped.png" alt="Speaker Image">
             <img id="bottom-speaker-mq" class="trigger-bottom" style="transform: translate(0, -97%);" src="speaker3_cropped_v2.png" alt="Speaker Image">
+            <img id="bottom-speaker-mq-two" class="trigger-bottom" style="transform: translate(0, -97%);" src="speaker3.png" alt="Speaker Image">
             <div>
                 <h2>Ready to order?</h2>
                 <p>Secure superior sound by pre-ordering the <b>NOVABEAT speaker</b> for an exclusive discount.</p>
