@@ -476,7 +476,6 @@
                   right: 10%;
                   top: calc(78px + 94px);
                   width: 40%;
-                  transform: scale(0.7);
                   padding: 0;
                   margin-top: 0;
               }
@@ -574,10 +573,6 @@
           }
 
         @media only screen and (min-width: 1199px) {
-          #signup-section {
-            transform: scale(0.8);
-          }
-
           #top-speaker {
             transform: scale(0.8);
           }
@@ -585,7 +580,6 @@
 
           @media only screen and (min-width: 1284px) {
             #signup-section {
-              transform: scale(0.9);
               width: 33%;
             }
 
@@ -609,10 +603,6 @@
 
             nav img {
                 display: none;
-            }
-
-            #signup-section {
-                transform: scale(1);
             }
 
             #top-speaker {
@@ -644,7 +634,7 @@
 
             #image-and-features > div:nth-of-type(2) {
                 transform: scale(1);
-                padding: 0 0 0 200px;
+                padding: 0 0 0 28%;
             }
 
             #image-and-features > div:nth-of-type(2) > * {
@@ -653,15 +643,11 @@
 
             #preorder-section > div {
                 transform: scale(1);
-                padding: 0 0 0 200px;
+                padding: 0 0 0 28%;
             }
         }
 
           @media only screen and (min-width: 1648px) {
-            #signup-section {
-              transform: scale(1.1);
-            }
-
             #top-speaker {
               transform: scale(1.1);
             }
@@ -677,9 +663,27 @@
             #signup-section {
               right: 17%;
             }
-
+            
             #top-speaker {
               transform: scale(1.2);
+            }
+          }
+
+          @media only screen and (min-width: 2000px) {
+            #top-speaker {
+              left: -400px;
+            }
+          }
+
+          @media only screen and (min-width: 2334px) {
+            #top-speaker {
+              left: -290px;
+            }
+          }
+
+          @media only screen and (min-width: 2504px) {
+            #top-speaker {
+              left: -240px;
             }
           }
         </style>
