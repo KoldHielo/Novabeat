@@ -112,14 +112,12 @@
         }
         
         #timer-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            justify-content: space-between;
             text-align: center;
             padding: 0 24px;
-            margin: -110px 0 17.5px 0;
-            gap: 0 20px;
-            max-width: 400px;
-
+            margin: -110px 0 60px 0;
+            height: 9.9vw;
         }
         
         .quantity {
@@ -129,13 +127,19 @@
             padding: 8px 5px;
             background-color: rgba(0, 0, 0, 30%);
             font-weight: 500;
+            width: 18vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4vw;
         }
         
         .timelapse {
             color: #BFDDFF;
             font-size: 14px;
             margin-top: 9.38px;
-            font-size: 12.95px;
+            font-size: 3vw;
             font-weight: 500;
         }
 
@@ -343,9 +347,33 @@
             }
 
             #timer-container {
-                transform: scale(1.64);
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
                 padding: 0 30px;
                 margin: -153px auto 17.5px auto;
+                gap: 0 20px;
+                width: auto;
+                max-width: 400px;
+                height: auto;
+                transform: scale(1.64);
+            }
+            
+            .quantity {
+                border: 1px solid #BFDDFF;
+                backdrop-filter: blur(2.732515811920166px);
+                border-radius: 50px;
+                padding: 8px 5px;
+                font-size: 1em;
+                width: auto;
+                height: auto;
+            }
+            
+            .timelapse {
+                color: #BFDDFF;
+                font-size: 14px;
+                margin-top: 9.38px;
+                font-size: 12.95px;
+                font-weight: 500;
             }
 
             #novabeat-logo {
