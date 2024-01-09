@@ -781,10 +781,10 @@
             <h3>Sign up to be notified</h3>
             <div id="signup-input-and-button">
                 <input type="email" placeholder="myemail@mydomain.com" name="email">
-                <div id="signup-button">
+                <a id="signup-button" href="#signup-button">
                     <img src="Icons/icon_bell.svg" alt="Bell Icon">
                     <span>Sign up</span>
-                </div>
+                </a>
             </div>
         </section>
         
@@ -825,7 +825,7 @@
                 <span id="was-price">£159.99</span>
                 <span id="now-price">£139.99</span>
 
-                <a id="preorder-button">
+                <a id="preorder-button" href="#preorder-button">
                     Pre-order
                 </a>
             </div>
@@ -911,7 +911,7 @@
             
             const countdownInterval = setInterval(countdown, 1000);
 
-            const navAnchors = document.querySelectorAll('nav a');
+            const navAnchors = document.querySelectorAll('nav a, #preorder-button, #signup-button');
 
             navAnchors.forEach(anchor => {
               anchor.addEventListener('click', e => {
