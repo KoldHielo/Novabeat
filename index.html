@@ -101,7 +101,7 @@
             transition: opacity 1400ms ease-in, transform 1400ms ease-out;
         }
 
-        nav a {
+        a {
           text-decoration: none;
         }
         
@@ -220,13 +220,17 @@
             user-select: none;
         }
 
-        #middle-speaker {
+        #middle-speaker, #middle-speaker-mq {
             display: block;
             position: relative;
             width: 120%;
             left: -10%;
-            margin: 0 auto;
+            margin: 23.5% auto 0 auto;
             transition: 1400ms ease-out;
+        }
+
+        #middle-speaker-mq {
+            display: none;
         }
 
         #image-and-features {
@@ -566,12 +570,18 @@
                   top: 0;
               }
 
-              #middle-speaker {
+              #middle-speaker-mq {
+                  display: block;
                   position: relative;
                   top: 50%;
                   transform: translate(0, -70%);
                   left: 0;
                   width: 100%;
+                  margin: 0 auto;
+              }
+
+              #middle-speaker {
+                display: none;
               }
 
               #image-and-features > div:first-of-type {
@@ -658,7 +668,7 @@
                 margin-top: 70px;
             }
 
-            #middle-speaker {
+            #middle-speaker-mq {
                 position: relative;
             }
 
@@ -790,7 +800,8 @@
         
         <section id="image-and-features">
             <div>
-                <img id="middle-speaker" src="speaker2.png" alt="Speaker Image" class="trigger-top" style="opacity: 0; transform: translate(0, -10px);">
+                <img id="middle-speaker" src="speaker2_cropped.png" alt="Speaker Image" class="trigger-top" style="opacity: 0; transform: translate(0, -10px);">
+                <img id="middle-speaker-mq" src="speaker2.png" alt="Speaker Image" class="trigger-top" style="opacity: 0; transform: translate(0, -10px);">
             </div>
 
             <div>
@@ -838,7 +849,7 @@
                     <span>NOVABEAT</span>
                 </div>
             </a>
-            <a href="#middle-speaker">
+            <a href="#image-and-features">
                 <div>
                     <img src="Icons/icon_features.svg" alt="Icon Features Image">
                     <span>FEATURES</span>
@@ -911,7 +922,7 @@
             
             const countdownInterval = setInterval(countdown, 1000);
 
-            const navAnchors = document.querySelectorAll('nav a, #preorder-button, #signup-button');
+            const navAnchors = document.querySelectorAll('a');
 
             navAnchors.forEach(anchor => {
               anchor.addEventListener('click', e => {
